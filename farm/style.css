@@ -27,23 +27,38 @@
   gap: 10px;
   align-items: center;
 }
-.coin {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+.informations {
   position: absolute;
   top: 20px;
   right: 20px;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  gap: 10px;
 }
-.coin img {
+.coin,
+.feedings {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.coin img,
+.feedings img {
   width: 50px;
 }
-.coinCount {
+.coinCount,
+.feedingCount {
   font-size: 44px;
   color: #ffed00;
   text-shadow: 1px 1px 3px black;
 }
+.earningCoin,
+.expenseFeeding {
+  color: #000;
+  text-shadow: 1px 1px 1px #ffed00;
+  text-align: end;
+}
+
 .animal img {
   width: 50px;
 }
@@ -119,6 +134,7 @@
 
 .animalImg {
   width: 50px;
+  position: absolute;
 }
 .sheepImg {
   position: absolute;
@@ -188,6 +204,84 @@
   transform: scale(1.1);
 }
 .closeAnimalModal {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  padding: 5px 8px;
+  border-radius: 50%;
+  border: 1px solid red;
+  color: red;
+  cursor: pointer;
+}
+/*  FEEDING */
+.buyFeedingModal {
+  background-color: #fff;
+  width: 400px;
+  height: auto;
+  padding: 50px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 400ms;
+}
+.feedingModalContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.buyFeedingModal .feedingModalContainer h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.buyFeedingModal .feedingModalContainer img {
+  width: 50px;
+}
+.buyFeedingModal .feedingModalContainer .feedingConatiner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buyFeedingModal .feedingModalContainer .feedingConatiner div {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: end;
+}
+
+.buyFeedingModal .feedingModalContainer .feedingConatiner div img {
+  width: 30px;
+}
+.buyFeedingModal .feedingModalContainer .feedingConatiner span {
+  margin-left: 10px;
+}
+.buyFeedingModal .feedingModalContainer .feedingConatiner div button {
+  padding: 5px 10px;
+  background: #fff;
+  border: 1px solid green;
+  color: green;
+  cursor: pointer;
+  transition-duration: 200ms;
+  border-radius: 2px;
+  margin-left: 10px;
+}
+.buyFeedingModal .feedingModalContainer .feedingConatiner div button:hover {
+  background: green;
+  color: #fff;
+  transform: scale(1.1);
+}
+.closeFeedingModal {
   position: absolute;
   top: -20px;
   right: -20px;
